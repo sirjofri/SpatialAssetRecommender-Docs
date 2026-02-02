@@ -1,6 +1,7 @@
 files=`{walk -f | grep 'index\.md$' | sed 's:\.md$:.html:' | grep -v '^out/'}
 copypng=`{walk -f | grep '\.png$' | grep -v '^out/'}
 copysvg=`{walk -f | grep '\.svg$' | grep -v '^out/'}
+copymp4=`{walk -f | grep '\.mp4$' | grep -v '^out/'}
 
 nl='
 '
@@ -17,7 +18,7 @@ END {
 }'
 linkconv='s:href="([a-zA-Z0-9\-_\.\/]+\/)index.md:href="\1:g'
 
-all:V: ${files:%=out/%} ${copypng:%=out/%} ${copysvg:%=out/%}
+all:V: ${files:%=out/%} ${copypng:%=out/%} ${copysvg:%=out/%} ${copymp4:%=out/%}
 
 test:V:
 	@{cd out && ../test/deadlinks.rc}
@@ -56,4 +57,9 @@ out/%.png:Q: %.png
 out/%.svg:Q: %.svg
 	mkdir -p `{basename -d $target}
 	cp $stem.svg $target
+	echo √ cpy `{basename $target}
+
+out/%.mp4:Q: %.mp4
+	mkdir -p `{basename -d $target}
+	cp $stem.mp4 $target
 	echo √ cpy `{basename $target}
