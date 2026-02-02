@@ -1,0 +1,100 @@
+#!/bin/rc
+
+nl='
+'
+
+fn checkhref{
+	file=$1
+	base=`{basename -d $file}
+	hrefs=`{
+		contents=`{cat $file}
+		for (c in $contents) {
+			if (~ $c 'href='*'>'*)
+				echo $c
+		}
+	}
+	# only url
+	hrefs=`{
+		{
+			for (h in $hrefs)
+				echo $h
+		} | sed 's/^href="//g;s/">.*$//g'
+	}
+	# only file paths
+	hrefs=`{
+		{
+			for (h in $hrefs)
+				if (! ~ $h '#'*)
+				if (! ~ $h 'http'*)
+					echo $h
+		} | sed 's/#.*$//g'
+	}
+	missing=()
+	for (h in $hrefs) {
+		nm=`{
+			@{
+				cd $base
+				if (! test -f $h^index.html)
+					echo $h^index.html
+			}
+		}
+		missing=($missing $nm)
+	}
+	
+	clickfile=`{echo $file | sed 's/\.html$/.md/g'}
+	for (m in $missing)
+		echo $clickfile: missing: $m
+}
+
+fn checkimg{
+	file=$1
+	base=`{basename -d $file}
+	hrefs=`{
+		contents=`{sed 's/img src=/ imgsrc=/g' $file;}
+		for (c in $contents) {
+			if (~ $c 'imgsrc="'*)
+				echo $c
+		}
+	}
+	# only url
+	hrefs=`{
+		{
+			for (h in $hrefs)
+				echo $h
+		} | sed 's/^imgsrc="//g;s/">?//g'
+	}
+	# only file paths
+	hrefs=`{
+		for (h in $hrefs)
+			if (! ~ $h 'http'*)
+				echo $h
+	}
+	missing=()
+	for (h in $hrefs) {
+		nm=`{
+				@{
+				cd $base
+				if (! test -f $h)
+					echo $h
+			}
+		}
+		missing=($missing $nm)
+	}
+	
+	clickfile=`{echo $file | sed 's/\.html$/.md/g'}
+	for (m in $missing)
+		echo $clickfile: missing: $m
+}
+
+files=`{walk -f | grep '\.html$'}
+
+echo →→→→→ missing href links
+for (f in $files) {
+	checkhref $f
+}
+echo →→→→→ end missing href links
+echo →→→→→ missing images
+for (f in $files) {
+	checkimg $f
+}
+echo →→→→→ end missing images
