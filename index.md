@@ -8,26 +8,28 @@ This is the documentation for the **Spatial Asset Recommender** Unreal plugin th
 
 ## What is the Spatial Asset Recommender?
 
+<video controls autoplay loop muted>
+<source src="./media/Demo.mp4">
+</video>
+
 ## How to Read this Documentation
 
 This documentation is divided into three separate parts, plus and introduction.
 The introduction will explain the terminology of this plugin and should be read by everyone using this plugin.
 
-The user guide describes the artist workflow for everyday work.
+The user guide describes the artists' workflow for everyday work.
 It explains the user interface of the main windows and how the plugin can be used.
 
 The setup and admin guide explains how to set up the classifiers and how to run the commandlets.
 It is recommended to set up an automated process to do that regularly.
 
-The programmers guide provides some hints about existing console variables and how to make custom extensions for your specific use cases.
+The programmers' guide provides some hints about existing console variables and how to make custom extensions for your specific use cases.
 
 ## Table of Contents
 
 - [Introduction](Introduction/index.md)
 - User Guide
   - [Context Assets Window](Context-Assets/index.md)
-    - [Drag and Drop](Context-Assets/Drag-and-Drop/index.md)
-    - [Compare Tags](Context-Assets/Compare-Tags/index.md)
   - [Classify Assets from the Content Browser](Classify-Assets-from-the-Content-Browser/index.md)
   - [View Tags for an Asset](View-Tags-for-an-Asset/index.md)
 - Setup and Admin Guide
