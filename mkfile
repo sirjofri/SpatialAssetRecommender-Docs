@@ -17,7 +17,7 @@ END {
 }'
 linkconv='s:href="([a-zA-Z0-9\-_\.\/]+\/)index.md:href="\1:g'
 
-all:V: ${files:%=out/%} ${copypng:%=out/%} ${copysvg:%=out/%} out/Scalem-DemoData.zip
+all:V: ${files:%=out/%} ${copypng:%=out/%} ${copysvg:%=out/%}
 
 test:V:
 	@{cd out && ../test/deadlinks.rc}
@@ -27,7 +27,7 @@ out/index.html:Q: index.md fragments/header.ht fragments/footer.ht
 	title=`{markdown -t `$nl{awk $"getfirsttitle <index.md}}
 	title=`{echo -n $title | sed 's:/:\\/:g;s:<:\\<:g;s:>:\\>:g'}
 	if(~ $#title 0)
-		title="Scalem"
+		title="Spatial Asset Recommender"
 	{
 		cat fragments/header.ht | sed 's/%TITLE%/'^$"title^'/g'
 		markdown $mkdflags index.md
@@ -40,7 +40,7 @@ out/%/index.html:Q: %/index.md fragments/header.ht fragments/footer.ht
 	title=`{markdown -t `$nl{awk $"getfirsttitle <$stem/index.md}}
 	title=`{echo -n $title | sed 's:/:\\/:g;s:<:\\<:g;s:>:\\>:g'}
 	if(~ $#title 0)
-		title="Scalem"
+		title="Spatial Asset Recommender"
 	{
 		cat fragments/header.ht | sed 's/%TITLE%/'^$"title^'/g'
 		markdown $mkdflags $stem/index.md
@@ -57,6 +57,3 @@ out/%.svg:Q: %.svg
 	mkdir -p `{basename -d $target}
 	cp $stem.svg $target
 	echo √ cpy `{basename $target}
-
-out/Scalem-DemoData.zip:Q: Scalem-DemoData.zip
-	cp $prereq $target
