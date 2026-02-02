@@ -7,9 +7,9 @@ fn checkhref{
 	file=$1
 	base=`{basename -d $file}
 	hrefs=`{
-		contents=`{cat $file}
+		contents=`{cat $file | sed 's/<a href/ahref/g'}
 		for (c in $contents) {
-			if (~ $c 'href='*'>'*)
+			if (~ $c 'ahref='*'>'*)
 				echo $c
 		}
 	}
@@ -18,7 +18,7 @@ fn checkhref{
 		{
 			for (h in $hrefs)
 				echo $h
-		} | sed 's/^href="//g;s/">.*$//g'
+		} | sed 's/^ahref="//g;s/">.*$//g'
 	}
 	# only file paths
 	hrefs=`{
