@@ -16,6 +16,8 @@ Inside these settings, you have _global_ settings and _per classification group_
 - `Ignore Tags`: Some classifiers can do a better job if they know which tags to ignore. For example, you can set overly generic tags like "Game" or "Prop."
 - `Far Clip Distance`: For the context calculation, this is the farthest distance of assets that are considered "in context."
 - `Near Clip Distance`: For the context calculation, this is the closest distance of assets that are considered "in context."
+- `Trace Radius`: For the context calculation, this is the radius of the sphere trace that's used to find the actual context distance.
+- `Additional Context Distance`: For the context calculation, a fraction of this value is added to the context distance. The further away the hit target is from the viewpoint, the more of this value is added to the context distance.
 
 ## Per classification group settings
 
