@@ -6,9 +6,15 @@ This window can be found in `Tools` &rarr; `Context Assets`.
 The same spirit can also be found in the _Place Actors_ panel under the same name.
 
 ![Context Assets](./media/context-assets.png)
+![Place Actors](./media/place-actors.png)
 
 This window is straightforward to understand, as it behaves a lot like the Content Browser.
 It displays assets that match the current level viewport situation and provides features for filtering that list and comparing the _weighted tags_ of the current situation and specific assets (see below).
+
+Hovering over an asset gives a standard tooltip, but with a "relevance" value which shows how similar this asset is to the current viewport context.
+The assets in the _Context Assets_ window are sorted according to this value.
+
+![Asset relevance](./media/relevance.png)
 
 ## Drag and Drop
 
