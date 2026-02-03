@@ -3,7 +3,7 @@
 # Classify Assets from the Content Browser
 
 It is possible to run the classifier for specific assets by navigating to `Spatial Asset Recommender` &rarr; `Classify` in the context menu for assets.
-This will use the classification configuration that applies to the selected assets.
+This will use the classification configuration that applies to the selected assets according to [your configuration](../Setup-Classifiers/index.md).
 Selected assets that can't be classified will be ignored.
 
 ![Classify menu entry](./media/classify-menu-entry.png)

@@ -2,8 +2,7 @@
 
 # Context Assets Window
 
-This window can be found in `Tools` &rarr; `Context Assets`.
-The same spirit can also be found in the _Place Actors_ panel under the same name.
+This window can be found in `Tools` &rarr; `Context Assets` or the _Place Actors_ panel under the same name.
 
 ![Context Assets](./media/context-assets.png)
 ![Place Actors](./media/place-actors.png)

@@ -42,6 +42,7 @@ The programmers' guide provides some hints about existing console variables and 
 - Setup and Admin Guide
   - [Setup Classifiers](Setup-Classifiers/index.md)
   - [Run the Classify Commandlet](Run-the-Classify-Commandlet/index.md)
+  - [Default Classifiers](Default-Classifiers/index.md)
   - [Demo LLM Server Setup](Demo-LLM-Server-Setup/index.md)
 - Programmer's Guide
   - [Tune CVars](Tune-CVars/index.md)

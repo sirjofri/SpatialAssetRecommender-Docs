@@ -8,7 +8,7 @@ To open that window, right-click the asset in the standard content browser, and 
 
 ![Show Tags menu entry](./media/show-tags-menu-entry.png)
 
-This window shows the name of the asset, and a full list of all tags and their weights.
+This window shows the name of the asset, and a full list of all tags and their weights. The colors visualize the weight, from red (0.0) to green (1.0). Note that 0.0 is filtered out.
 
 ![Show Tags window](./media/show-tags-window.png)
 

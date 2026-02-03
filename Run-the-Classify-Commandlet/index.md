@@ -1,4 +1,4 @@
-[← Previous](../Setup-Classifiers/index.md) | [Start](../index.md) | [Next →](../Demo-LLM-Server-Setup/index.md)
+[← Previous](../Setup-Classifiers/index.md) | [Start](../index.md) | [Next →](../Default-Classifiers/index.md)
 
 # Run the Classify Commandlet
 
@@ -20,4 +20,4 @@ The commandlet uses the [existing classifier configuration](../Setup-Classifiers
 > **Note:** Depending on the classifier configuration, the process can take a long time.
 > You probably want to automate this process for your project.
 
-[Next →](../Demo-LLM-Server-Setup/index.md)
+[Next →](../Default-Classifiers/index.md)
