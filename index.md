@@ -18,19 +18,6 @@ Save endless hours searching for assets that fit into your scenario.
 
 - [Purchase Spatial Asset Recommender]()
 
-## How to Read this Documentation
-
-This documentation is divided into three separate parts, plus and introduction.
-The introduction will explain the terminology of this plugin and should be read by everyone using this plugin.
-
-The user guide describes the artists' workflow for everyday work.
-It explains the user interface of the main windows and how the plugin can be used.
-
-The setup and admin guide explains how to set up the classifiers and how to run the commandlets.
-It is recommended to set up an automated process to do that regularly.
-
-The programmers' guide provides some hints about existing console variables and how to make custom extensions for your specific use cases.
-
 ## Table of Contents
 
 - [Introduction](Introduction/index.md)
@@ -46,3 +33,18 @@ The programmers' guide provides some hints about existing console variables and 
 - Programmer's Guide
   - [Tune CVars](Tune-CVars/index.md)
   - [Write your own Classifier](Write-your-own-Classifier/index.md)
+
+## How to Read this Documentation
+
+This documentation is divided into three separate parts, plus and introduction.
+The introduction will explain the terminology of this plugin and should be read by everyone using this plugin.
+
+The user guide describes the artists' workflow for everyday work.
+It explains the user interface of the main windows and how the plugin can be used.
+
+The setup and admin guide explains how to set up the classifiers and how to run the commandlets.
+It is recommended to set up an automated process to do that regularly.
+
+The programmers' guide provides some hints about existing console variables and how to make custom extensions for your specific use cases.
+
+[Start →](Introduction/index.md)

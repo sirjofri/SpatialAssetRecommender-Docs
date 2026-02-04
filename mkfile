@@ -6,7 +6,7 @@ copymp4=`{walk -f | grep '\.mp4$' | grep -v '^out/'}
 nl='
 '
 
-mkdflags=-f toc -f fencedcode -f tables -T -x
+mkdflags=-f fencedcode -f tables -x
 getfirsttitle='
 /^#[ \t]/ {
 	sub(/^#[ \t]+/, "")
