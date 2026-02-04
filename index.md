@@ -8,8 +8,7 @@ This is the documentation for the **Spatial Asset Recommender** Unreal plugin th
 <source src="./media/Demo.mp4">
 </video>
 
-The _Spatial Asset Recommender_ provides a list of assets that share some similarity with the current level viewport context.
-These assets have a high chance to fit into the current situation.
+The _Spatial Asset Recommender_ scans your scene and suggests fitting assets automatically, based on your current level viewport context.
 
 Instead of searching for the perfect asset in the Content Browser, _Spatial Asset Recommender_ might already serve it, ready to be placed in the level.
 
