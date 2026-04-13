@@ -50,21 +50,6 @@ out/%/index.html:Q: %/index.md fragments/header.ht fragments/footer.ht
 	} | sed $"linkconv >$target
 	echo √ gen $target
 
-out/%.png:Q: %.png
-	mkdir -p `{basename -d $target}
-	cp $stem.png $target
-	echo √ cpy `{basename $target}
-
-out/%.svg:Q: %.svg
-	mkdir -p `{basename -d $target}
-	cp $stem.svg $target
-	echo √ cpy `{basename $target}
-
-out/%.mp4:Q: %.mp4
-	mkdir -p `{basename -d $target}
-	cp $stem.mp4 $target
-	echo √ cpy `{basename $target}
-
 out/%:Q: %
 	mkdir -p `{basename -d $target}
 	cp $stem $target
