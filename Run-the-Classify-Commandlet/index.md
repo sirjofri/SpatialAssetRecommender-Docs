@@ -14,6 +14,7 @@ You probably want to provide more parameters:
 - `-MaxMinutes=N`: Will stop after `N` minutes of total classification time.
 - `-Iterate`: Will skip assets that have already been classified. Ignores hashes.
 - `-Clear`: Ignore the existing database. This will overwrite any existing classified data.
+- `-Prepass`: Do not run the classify pass, only run the prepass for supported classifiers.
 
 The commandlet uses the [existing classifier configuration](../Setup-Classifiers/index.md).
 
