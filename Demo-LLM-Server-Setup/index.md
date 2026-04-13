@@ -14,7 +14,7 @@ To try out this feature, you need to set up a LLM server that supports chat comp
 There are mainly two easy ways to get llama.cpp:
 
 1. Using winget (Vulkan only)
-2. Downloading it from GitHub (Vulkan and CUDA)
+2. Downloading it from [GitHub](https://github.com/ggml-org/llama.cpp/releases) (Vulkan and CUDA)
 
 > **Note:** I have nothing to do with llama.cpp or the creator of llama.cpp. Downloading and running their software is at your own risk!
 
@@ -26,7 +26,7 @@ There are mainly two easy ways to get llama.cpp:
 
 ### The GitHub way
 
-1. Head over to [github.com/ggml-org/llama.cpp/releases](https://github.com/ggml-org/llama.cpp/releases) (external link).
+1. Head over to [https://github.com/ggml-org/llama.cpp/releases](https://github.com/ggml-org/llama.cpp/releases) (external link).
 2. Pick one of the versions to download the zip file.
 3. Extract the zip file to a folder of your choice.
 4. **Make sure that the binaries are added to your `%PATH%` environment variable.**
@@ -38,7 +38,7 @@ There are mainly two easy ways to get llama.cpp:
 
 There are three ways to get the batch file I prepared:
 
-1. Download it [here]().
+1. Download it [here](../media/llama-server.bat).
 2. Use the file from the repo (`llama-server.bat`).
 3. Copy-paste the content and save the file as a `*.bat`.
 
@@ -46,7 +46,8 @@ There are three ways to get the batch file I prepared:
 @echo off
 llama-server.exe ^
  -hf ggml-org/gemma-3-12b-it-GGUF:Q4_K_M ^
- --port 8080 --host 127.0.0.1
+ --port 8080 --host 127.0.0.1 ^
+ --ctx-size 16000
 ```
 
 ## Step 3: Run the server
@@ -56,7 +57,7 @@ Windows will probably ask for firewall access on the first run.
 Other than that, there are a few things to note:
 
 - The provided batch file should work _as is_, and also quite stable. However, it's not fine-tuned to match the performance of your computer. See the next section for a few hints.
-- The provided batch file will start the server as listening only for itself. If you want to run the server on a separate machine, you need replace the host address `127.0.0.1` with a different address, e.g. `0.0.0.0`.
+- The provided batch file will start the server as listening only for itself. If you want to run the server on a separate machine, you need to replace the host address `127.0.0.1` with a different address, e.g. `0.0.0.0`.
 
 > **Warning:** Exposing your server at `0.0.0.0` makes it reachable to anyone on your network. Be sure to only run this on a secure network and at your own risk!
 
@@ -70,6 +71,6 @@ There are a few ways to improve the performance and accuracy of the LLM server:
 - **Do you _need_ multimodal support?** If you only want to classify assets with text-based values, you can save a bit of memory/VRAM usage by adding the `--no-mmproj` flag.
 - **Adjust the context size.** In some cases, you can save performance by adjusting the `--ctx-size` parameter to a lower value.
 
-These are a few of many parameters you can adjust, and it's a matter of playing around with them to find the sweet spot. There are external tools that can run benchmarks on your computer to find the best values, if you need them.
+These are a few of many parameters you can adjust, and it's a matter of playing around with them to find the sweet spot. There are external tools that can run benchmarks on your computer to find the best values if you need them. See also the [full documentation](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md) for the llama.cpp server.
 
 [Next →](../Tune-CVars/index.md)
