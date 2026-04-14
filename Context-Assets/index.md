@@ -20,6 +20,11 @@ The assets in the _Context Assets_ window are sorted according to this value.
 One of the core philosophies of the _Spatial Asset Recommender_ is to provide a seamless and smooth workflow for anyone who needs to place or assign assets in a level.
 For that purpose, it supports easy drag-and-drop behavior of assets from both the _Place Actors_ panel and the dedicated _Context Assets_ window.
 
+## Bring Your Own Scenario
+
+Using the little lock icon, it is possible to "freeze" the current selection, even though the level viewport changes.
+This can be useful if you want to bring one scenario into a different location&mdash;even different levels.
+
 ## Compare Tags
 
 By clicking on the `Show Tags` button, it is possible to view the calculated _weighted tags_ of the most recent level viewport.

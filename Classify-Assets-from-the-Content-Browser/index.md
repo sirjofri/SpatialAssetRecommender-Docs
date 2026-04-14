@@ -14,4 +14,6 @@ You can cancel the classification process, but the system will always complete t
 
 ![Classification in progress](./media/classification-progress.png)
 
+> **Note:** This in-editor classification feature does _not_ run a prepass! You need to use the commandlet to do that.
+
 [Next →](../View-Tags-for-an-Asset/index.md)
