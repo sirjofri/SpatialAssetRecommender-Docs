@@ -2,10 +2,10 @@
 
 # Demo LLM Server Setup
 
-One of the powerful features of the Spatial Asset Recommender is the ability to ask a large language model (LLM) for weighted tags.
+One of the powerful features of the _Spatial Asset Recommender_ is the ability to ask a large language model (LLM) for weighted tags.
 To try out this feature, you need to set up a LLM server that supports chat completions.
 
-> **Note:** Following this procedure, you'll have a _local_ LLM server. Depending on your hardware, you can only run smaller models. For production use, you want a powerful machine with lots of VRAM. If you have a machine like that, you can use a similar process to run larger models there.
+> **Note:** Following this procedure, you'll have a _local_ LLM server. Depending on your hardware, you can only run smaller models. For production use, you probably want a powerful machine with lots of VRAM. If you have a machine like that, you can use a similar process to run larger models there.
 
 > **Note:** This guide is meant for Windows users. Linux and Mac users will need to find their own way, though the process likely looks similar.
 
@@ -17,6 +17,8 @@ There are mainly two easy ways to get llama.cpp:
 2. Downloading it from [GitHub](https://github.com/ggml-org/llama.cpp/releases) (Vulkan and CUDA)
 
 > **Note:** I have nothing to do with llama.cpp or the creator of llama.cpp. Downloading and running their software is at your own risk!
+
+> **Note:** I also have nothing to do with the model that is set up in that demo batch file. Use at your own risk!
 
 ### The winget way
 
@@ -36,16 +38,15 @@ There are mainly two easy ways to get llama.cpp:
 
 ## Step 2: Get the batch file
 
-There are three ways to get the batch file I prepared:
+There are multiple ways to get the batch file I prepared:
 
 1. Download it [here](../media/llama-server.bat).
-2. Use the file from the repo (`llama-server.bat`).
-3. Copy-paste the content and save the file as a `*.bat`.
+2. Copy-paste the content and save the file as a `*.bat`.
 
 ```bat
 @echo off
 llama-server.exe ^
- -hf ggml-org/gemma-3-12b-it-GGUF:Q4_K_M ^
+ -hf unsloth/gemma-4-E4B-it-GGUF:Q5_K_M ^
  --port 8080 --host 127.0.0.1 ^
  --ctx-size 16000
 ```
