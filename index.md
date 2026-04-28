@@ -16,7 +16,7 @@ Save endless hours searching for assets that fit into your scenario.
 
 ## Quick Links
 
-- [Purchase Spatial Asset Recommender]()
+- [Purchase Spatial Asset Recommender](https://fab.com/s/6a31b5296684)
 
 ## Table of Contents
 
