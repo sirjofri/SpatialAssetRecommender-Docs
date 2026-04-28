@@ -17,6 +17,7 @@ Save endless hours searching for assets that fit into your scenario.
 ## Quick Links
 
 - [Purchase Spatial Asset Recommender](https://fab.com/s/6a31b5296684)
+- [Report bugs and other issues](https://github.com/sirjofri/SpatialAssetRecommender-Docs/issues)
 
 ## Table of Contents
 
